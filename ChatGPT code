@@ -1,0 +1,18 @@
+#Imports the 'key' and 'listener' from 'pynput.keboard' module
+from pynput.keyboard import Key, Listener
+
+#Function that takes a key as the argument and prints which key was pressed
+def on_press(key):
+    print(f'Key pressed: {key}')
+
+#Function that checks to see if the key was released and checks if the 'esc' was pressed which stops the listener
+def on_release(key):
+    if key == Key.esc:
+        # Stop listener
+        return False
+
+#Creates a listener object with soecified functions.
+#  The with statement is used to ensure that the listener is properly started and stopped.
+with Listener(on_press=on_press, on_release=on_release) as listener:
+    #Starts the listener
+    listener.join()
