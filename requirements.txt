@@ -1,0 +1,5 @@
+pynput library, import keyboard module
+
+When running the keylogger program, you need to allow the editor input monitoring permission.
+This allows for the code to execute, as your computer will attempt to block the monitoring.
+
